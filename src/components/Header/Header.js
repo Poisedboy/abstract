@@ -5,23 +5,25 @@ import './header.css';
 const Header = () => {
     return (
         <div className="header">
-            <div className="nav-bar">
+            <section className="nav-bar">
                 <div>
                     <Link to='/' className="logo">Abstract</Link>
                     <Link to="/help" className="help">Help center</Link>
                 </div>
-                <input id="menu-toggle" type="checkbox" />
-                <label className='menu-button-container' htmlFor="menu-toggle" />
-                <div className='menu-button'></div>
+                
                 <div className="buttons">
                     <button className="submit-request">Submit a request</button>
                     <button className="sign-in">Sign in</button>
                 </div>
-            </div>
-            <div className="banner">
-                <h3>How can we help?</h3>
-                <input />
-            </div>
+            </section>
+            <section className="banner">
+                <div>
+                    <h4>How can we help?</h4>
+                    <div>
+                        <input type='text' placeholder="Search"/>
+                    </div>
+                </div>
+            </section>
         </div>
     );
 };

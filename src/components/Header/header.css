@@ -1,39 +1,40 @@
 .nav-bar {
-    height: 25px;
-    padding: 2% 5%;
-    background-color: black;
-    display: flex;
-    justify-content: space-between;
-}
-
-.nav-bar > div > * {
-    font-size: 1.05rem;
-    margin-right: 5px;
-    text-decoration: none;
-    color: white;
+  height: 45px;
+  padding: 2% 10%;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
 }
 
 .nav-bar > div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-bar > div > * {
+  font-size: 1.10rem;
+  margin-left: 1rem;
+  text-decoration: none;
+  color: white;
 }
 
 .nav-bar > div > button {
-    border-radius: 10px;
+  padding: 10px 30px;
+  border-radius: 10px;
 }
 
 .help:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .logo:hover {
-    color: gray;
+  color: gray;
 }
 
 .submit-request {
-    border: 1px solid white;    
-    background: black;
+  border: 1px solid white;    
+  background: #191a1b;
 }
 
 .sign-in {
@@ -45,99 +46,31 @@
     color: black;
 }
 
-.menu-button-container {
-    display: none;
-    height: 100%;
-    width: 30px;
-    cursor: pointer;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  #menu-toggle {
-    display: none;
-  }
-  
-  .menu-button,
-  .menu-button::before,
-  .menu-button::after {
-    display: block;
-    background-color: #fff;
-    position: absolute;
-    height: 4px;
-    width: 30px;
-    transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
-    border-radius: 2px;
-  }
-  
-  .menu-button::before {
-    content: '';
-    margin-top: -8px;
-  }
-  
-  .menu-button::after {
-    content: '';
-    margin-top: 8px;
-  }
-  
-  #menu-toggle:checked + .menu-button-container .menu-button::before {
-    margin-top: 0px;
-    transform: rotate(405deg);
-  }
-  
-  #menu-toggle:checked + .menu-button-container .menu-button {
-    background: rgba(255, 255, 255, 0);
-  }
-  
-  #menu-toggle:checked + .menu-button-container .menu-button::after {
-    margin-top: 0px;
-    transform: rotate(-405deg);
-  }
-  
-  @media (max-width: 1200px) {
-    .menu-button-container {
-      display: flex;
-    }
-    .buttons {
-      position: absolute;
-      top: 0;
-      margin-top: 50px;
-      left: 0;
-      flex-direction: column;
-      width: 100%;
-      justify-content: center;
-      align-items: center;
-    }
-    #menu-toggle ~ .buttons button {
-        display: none;
-        height: 0;
-        margin: 0;
-        padding: 0;
-        border: 0;
-        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
-    }
-    #menu-toggle:checked ~ .buttons button {
-        display: block;
-        border: 1px solid #333;
-        height: 2.5em;
-        padding: 0.5em;
-        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
-    }
-    .buttons > button {
-      display: flex;
-      justify-content: center;
-      margin: 0;
-      padding: 0.5em 0;
-      width: 100%;
-      color: white;
-      background-color: #222;
-    }
-    .buttons > button:not(:last-child) {
-      border-bottom: 1px solid #444;
-    }
-  }
-
 .banner {
-    background-color: #dadbf1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #dadbf1;
 }
+
+.banner div {
+  margin: 120px;
+  display: inline;
+  padding: 30px;
+  text-align: center;
+  font-size: 3.5rem;
+}
+
+.banner h4 {
+  font-weight: 200;
+}
+
+.banner input {
+  width: 55%;
+  font-size: 1.5rem;
+  padding: 15px 30px;
+  border-radius: 5px;
+  border: 1px solid #4C5FD5;
+}
+
