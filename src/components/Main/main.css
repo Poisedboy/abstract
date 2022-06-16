@@ -3,18 +3,17 @@
     margin-bottom: 5%;
     padding: 2% 10%;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 50% 50%;
 }
 
 .card {
     margin-bottom: 15%;
-    margin-right: 15px;
-    display: inherit;
-    grid-template-columns: 35% 65%;
+    margin-right: 25px;
+    display: flex;
 }
 
-.icon img {
-    max-width: 177px;
+img {
+    max-width: 120px;
     margin-right: 25px;
 }
 
@@ -30,4 +29,18 @@
 .text a {
     color: #4C5FD5;
     text-decoration: none;
+}
+
+@media (max-width: 776px) {
+    .main {
+        padding: 0 5%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .text {
+        margin: 1%;
+    }
+    .icon img {
+        max-width: 100px;
+    }
 }

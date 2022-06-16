@@ -1,76 +1,91 @@
 .nav-bar {
-  height: 45px;
-  padding: 2% 10%;
-  background-color: black;
-  display: flex;
-  justify-content: space-between;
-}
-
-.nav-bar > div {
+  height: 110px;
   display: flex;
   align-items: center;
-  justify-content: center;
-}
-
-.nav-bar > div > * {
-  font-size: 1.10rem;
-  margin-left: 1rem;
-  text-decoration: none;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 1rem 4.5rem;
+  background-color: #191a1b;
   color: white;
 }
 
-.nav-bar > div > button {
-  padding: 10px 30px;
-  border-radius: 10px;
+.logo-help {
+  font-size: 1.1rem;
 }
 
-.help:hover {
-  text-decoration: underline;
+.logo-help > * {
+  margin-right: 10px;
+  color: white;
 }
 
-.logo:hover {
-  color: gray;
+.buttons button {
+  color: white;
+  font-size: 1.1rem;
+  margin-right: 25px;
+  padding: 0.6rem 1.3rem;
+  border-radius: 15px;
 }
 
 .submit-request {
-  border: 1px solid white;    
   background: #191a1b;
+  border: 1px solid white;
 }
 
 .sign-in {
-    background: #4C5FD5;
+  background: #4C5FD5;
 }
 
 .sign-in:hover {
-    background: white;
-    color: black;
+  background: white;
+  color: black;
 }
 
-.banner {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background: #dadbf1;
+input[type=checkbox] {
+  display: none;
 }
 
-.banner div {
-  margin: 120px;
-  display: inline;
-  padding: 30px;
-  text-align: center;
-  font-size: 3.5rem;
+.hamburger {
+  display: none;
+  font-size: 24px;
+  user-select: none;
 }
 
-.banner h4 {
-  font-weight: 200;
+@media (max-width: 1199px) {
+  .buttons {
+    display:none;
+    position: absolute;
+    background-color: #191a1b;
+    left: 0;
+    top: 110px;
+    text-align: center;
+    padding: 10px;
+  }
+  input[type=checkbox]:checked ~ .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  input[type=checkbox]:checked ~ .buttons button {
+    width: 50%;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+  }
+  input[type=checkbox]:checked ~ .buttons .submit-request {
+    border-bottom: 1px whitesmoke solid;
+  }
+  .sign-in:hover {
+    background: #191a1b;
+    color: white;
+  }
+  .hamburger {
+    display: block;
+  }
 }
 
-.banner input {
-  width: 55%;
-  font-size: 1.5rem;
-  padding: 15px 30px;
-  border-radius: 5px;
-  border: 1px solid #4C5FD5;
+@media (max-width: 530px) {
+  .nav-bar {
+    padding: 1rem;
+  }
 }
-

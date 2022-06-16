@@ -2,7 +2,7 @@ import React from 'react';
 import './main.css';
 import { useSelector } from 'react-redux';
 
-const Main = (props) => {
+const Main = () => {
     const data = useSelector(state => state.data);
 
     return <div className='main'>
@@ -16,7 +16,7 @@ const Main = (props) => {
                         <div className='text'>
                             <h3>{item.title}</h3>
                             <p>{item.description}</p>
-                            <a href='/'>{`Learn More ->`}</a>
+                            <a href='/'>{`Learn More →`}</a>
                         </div>
                     </section>
                 )
