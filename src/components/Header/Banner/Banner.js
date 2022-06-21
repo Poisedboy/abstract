@@ -8,9 +8,9 @@ const Banner = () => {
                 <h4>How can we help?</h4>
             </div>
             <input
-                type='text'
-                placeholder="Search"
-                className='search'
+                    type='text'
+                    placeholder="Search"
+                    className='search'
             />
         </div>
     );

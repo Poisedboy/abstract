@@ -1,6 +1,7 @@
 import React from 'react';
 import './main.css';
 import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 const Main = () => {
     const data = useSelector(state => state.data);
@@ -16,7 +17,7 @@ const Main = () => {
                         <div className='text'>
                             <h3>{item.title}</h3>
                             <p>{item.description}</p>
-                            <a href='/'>{`Learn More →`}</a>
+                            <Link to='/'>{`Learn More →`}</Link>
                         </div>
                     </section>
                 )
